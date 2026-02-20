@@ -1,1 +1,2 @@
-# Java_Week_6
+# Option 1
+Submit document with methods for your automobile class, and pseudo code indicating functionality of each method.
