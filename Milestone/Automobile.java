@@ -6,6 +6,7 @@ public class Automobile {
     String model;
     int year;
 
+    // Method to get user input for automobile details
     public void getUserInput(Scanner scanner) {
         System.out.print("Enter make: ");
         make = scanner.nextLine();
@@ -18,6 +19,7 @@ public class Automobile {
 
     }
 
+    // Method to display automobile information
     public void displayInfo() {
         System.out.println("Make: " + make);
         System.out.println("Model: " + model);
@@ -34,3 +36,6 @@ public class Automobile {
         scanner.close();
     }
 }
+
+//Add ArrayList to create an Inventory list
+//Need to Add,update, delete methods
