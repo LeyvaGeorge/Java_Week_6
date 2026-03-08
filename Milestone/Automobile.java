@@ -1,41 +1,60 @@
-import java.util.Scanner;
+package Milestone;
 
 public class Automobile {
+    private String make;
+    private String model;
+    private String color;
+    private int year;
+    private int mileage;
 
-    String make;
-    String model;
-    int year;
-
-    // Method to get user input for automobile details
-    public void getUserInput(Scanner scanner) {
-        System.out.print("Enter make: ");
-        make = scanner.nextLine();
-
-        System.out.print("Enter model: ");
-        model = scanner.nextLine();
-
-        System.out.print("Enter year: ");
-        year = scanner.nextInt();
-
+    // Default constructor
+    public Automobile() {
+        this.make = "Unknown";
+        this.model = "Unknown";
+        this.color = "Unknown";
+        this.year = 0;
+        this.mileage = 0;
     }
 
-    // Method to display automobile information
-    public void displayInfo() {
-        System.out.println("Make: " + make);
-        System.out.println("Model: " + model);
-        System.out.println("Year: " + year);
+    // Parameterized constructor
+    public Automobile(String make, String model, String color, int year, int mileage) {
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.year = year;
+        this.mileage = mileage;
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        Automobile car = new Automobile();
-        car.getUserInput(scanner);
-        car.displayInfo();
-
-        scanner.close();
+    //Gets the details of the automobile
+    public String[] getAutoInfo() {
+        return new String[] {
+            this.make,
+            this.model,
+            this.color,
+            String.valueOf(this.year),
+            String.valueOf(this.mileage)
+        };
     }
+
+    //Update Vehicle details
+    public void updateMake(String make) {
+        this.make = make;
+    }
+    public String getMake() {
+        return this.make;
+    }
+
+    public void updateModel(String model) {
+        this.model = model;
+    }
+    public void updateColor(String color) {
+        this.color = color;
+    }
+    public void updateYear(int year) {
+        this.year = year;
+    }
+    public void updateMileage(int mileage) {
+        this.mileage = mileage;
+    }
+
 }
-
-//Add ArrayList to create an Inventory list
-//Need to Add,update, delete methods
